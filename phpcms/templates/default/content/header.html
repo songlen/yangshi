@@ -20,8 +20,9 @@
 		<div class="menu fr">
 			{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
 			<ul>
+				<li class="first"><a href="{siteurl($siteid)}">首页</a></li>
 				{loop $data $n $r}
-				<li {if ($n == '1')}class="first"{/if}>
+				<li>
 					<a href="{$r[url]}">{$r[catname]}</a>
 					{pc:content action="category" catid="$r[catid]" return="subcats"}
 
