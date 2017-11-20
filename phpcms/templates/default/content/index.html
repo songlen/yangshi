@@ -1,0 +1,170 @@
+{template "content","header"}
+	<div class="jq22-container">
+
+		<div class="flexslider">
+			<ul class="slides">
+			{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 11 AND disabled=0 ORDER BY listorder ASC"}
+				{loop $data $r}
+				<?php 
+					$r = json_decode($r['setting'], true);
+					$r = $r[1];
+				?>
+				<li><a href="{$r[linkurl]}"><img src="{$r[imageurl]}"></a></li>
+				{/loop}
+			{/pc}
+			</ul>
+		</div>
+		
+	</div>
+	<div class="index_news_title"></div>
+	<div class="container index_news_box">
+		<div class="index_video fl">{pc:block pos="index_video"}{/pc}</div>
+		<div class="index_news fr">
+			<div class="overflow">
+				<div class="more_news"><a href="{$CATEGORYS[10][url]}">MORE</a></div>
+				<ul class="index_news_tab">
+					<li class="hover">最新</li>
+					<li>公司动态</li>
+					<li>行业资讯</li>
+				</ul>
+				
+			</div>
+			<div class="index_news_tab_box" style="display: block;">
+				{pc:get sql="SELECT url, inputtime, title, description from v9_news where catid in(10,11) and status=99 order by id DESC" num="3"}
+
+				{loop $data $r}
+				<div class="news_content overflow">
+					<div class="date fl">
+						<p class="day">{date('d', $r[inputtime])}</p>
+						<p class="year">{date('Y.m', $r[inputtime])}</p>
+					</div>
+					<div class="news_info fl">
+						<p class="title"><a href="{$r[url]}">{$r[title]}</a></p>
+						<p class="brief">{$r['description']}</p>
+					</div>
+				</div>
+				{/loop}
+				{/pc}
+			</div>
+			<div class="index_news_tab_box">
+				
+				{pc:content  action="lists" catid="10" order="id DESC" num="3"}
+				{loop $data $r}
+				<div class="news_content overflow">
+					<div class="date fl">
+						<p class="day">{date('d', $r[inputtime])}</p>
+						<p class="year">{date('Y.m', $r[inputtime])}</p>
+					</div>
+					<div class="news_info fl">
+						<p class="title"><a href="{$r[url]}">{$r[title]}</a></p>
+						<p class="brief">{$r['description']}</p>
+					</div>
+				</div>
+				{/loop}
+				{/pc}
+			</div>
+			<div class="index_news_tab_box">
+				
+				
+				{pc:content  action="lists" catid=11" order="id DESC" num="3"}
+				{loop $data $r}
+				<div class="news_content overflow">
+					<div class="date fl">
+						<p class="day">{date('d', $r[inputtime])}</p>
+						<p class="year">{date('Y.m', $r[inputtime])}</p>
+					</div>
+					<div class="news_info fl">
+						<p class="title"><a href="{$r[url]}">{$r[title]}</a></p>
+						<p class="brief">{$r['description']}</p>
+					</div>
+				</div>
+				{/loop}
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<div class="index_donghua_title"></div>
+	<div class="donghuabg">
+		<div id="LoopDiv" style="margin-top: 80px;">
+			<input id="S_Num" type="hidden" value="8" />
+			<div id="starsIF" class="imageflow">
+				{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 12 AND disabled=0 ORDER BY listorder ASC"}
+					{loop $data $r}
+					<?php 
+						$r = json_decode($r['setting'], true);
+						$r = $r[1];
+					?>
+					<img src="{$r[imageurl]}" longdesc="{$r[linkurl]}" width="280" height="300" />
+					{/loop}
+				{/pc}	
+			</div>
+		</div>
+
+		<div class="index_yansheng_title"></div>
+		<div class="container">
+			<div class="index_yansheng_box">
+				<ul>
+					<li class="yanshi_1"><a href=""><img src="{APP_PATH}statics/default/images/index_26.jpg" alt=""></a></li>
+					<li class="yanshi_2"><a href=""><img src="{APP_PATH}statics/default/images/index_27.jpg" alt=""></a></li>
+					<li class="yanshi_3"><a href=""><img src="{APP_PATH}statics/default/images/index_28.jpg" alt=""></a></li>
+					<li class="yanshi_4"></li>
+					<li class="yanshi_5"></li>
+					<li class="yanshi_6"><a href=""><img src="{APP_PATH}statics/default/images/index_33.jpg" alt=""></a></li>
+					<li class="yanshi_7"><a href=""><img src="{APP_PATH}statics/default/images/index_34.jpg" alt=""></a></li>
+					<li class="yanshi_8"><a href=""><img src="{APP_PATH}statics/default/images/index_30.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="index_yansheng_more"><a href="">MORE</a></div>
+		</div>
+		{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 13 AND disabled=0 ORDER BY listorder ASC" num="1"}
+			{loop $data $r}
+			<?php 
+				$r = json_decode($r['setting'], true);
+				$r = $r[1];
+			?>
+			<img class="bgimg" src="{$r[imageurl]}" />
+			{/loop}
+		{/pc}						
+	</div>
+{template "content","footer"}
+
+	
+	<script type="text/javascript">
+		// 导航下拉
+		$(function(){
+			$('.menu li').hover(function(){
+				$(this).find('dl').show();
+			}, function(){
+				$(this).find('dl').hide();
+			})
+		})
+
+
+		// 首页新闻切换
+		$(function(){
+			$('.index_news_tab li').mouseover(function(){
+				$(this).addClass('hover').siblings().removeClass('hover');
+				$('.index_news_tab_box').hide();
+				$('.index_news_tab_box').eq($(this).index()).show();
+			})
+		})
+	</script>
+
+	<!-- 首页轮播图 -->
+	<script type="text/javascript" src="{APP_PATH}statics/default/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.flexslider').flexslider({
+				directionNav: true,
+				pauseOnAction: false,
+				slideshowSpeed: 4000,
+				animationDuration: 1000,
+			});
+		});
+	</script>
+
+	<!-- 3D轮播图 -->
+
+    <script type="text/javascript" src="{APP_PATH}statics/default/js/imageflow.js"></script>
+</body>
+</html>
