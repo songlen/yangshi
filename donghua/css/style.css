@@ -1,6 +1,6 @@
 body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div, input, dl, dt{margin:0;padding:0;border:0;} 
 body{background:#fff;color:#000; font-size:14px;  font-family:"SimSun","宋体","Arial Narrow";} 
- input {outline: none;}
+
 ul,ol{list-style-type:none;} 
 /*select,input,img,select{vertical-align:middle;} */
  
@@ -13,7 +13,7 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .overflow {overflow: hidden;}
 
 
-.container {width: 1200px; overflow: hidden; margin: 0 auto;}
+.container {width: 1200px; margin: 0 auto;}
 
 #top {height: 40px; line-height: 40px; background: #ad0400;}
 .language {margin-right: 30px;}
@@ -22,7 +22,7 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 
 .index_search {margin: 0px; width: 156px; height: 28px;}
 .index_search input{ background: url(../images/index_03.jpg) no-repeat ; float: left; height: 28px; padding-right: 20px; padding-left:30px; width: 111px; color: #FFF; margin-top: 7px}
-
+ .index_search input {outline: none;}
 .nav {border-bottom: 1px solid #d2d2d2;}
 .logo {padding:10px 0;}
 .menu ul li {float: left; height: 112px; line-height: 112px; font-size: 20px; text-align: center;}
@@ -96,7 +96,7 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .index_yansheng_more a{padding: 3px 5px; color: #999; border: 1px solid #bfbfbf; font-weight: bold; font-family: "微软雅黑";}
 
 .footer {height: 450px; background: #ad0400; margin-top: 150px;}
-.footer_content {padding-top: 100px;}
+.footer_content {padding-top: 100px; overflow: hidden;}
 .foot_logo {float: left;padding-right: 60px; border-right: 1px solid #fffdfe;}
 
 .saoma {float: left;}
@@ -111,3 +111,71 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .web_brief {margin-top: 80px; text-align: center; color: #FFF;font-family: "微软雅黑"}
 .banquan {font-size: 18px; color: #FFF; font-weight: bold; }
 .beian {margin-left: 90px;}
+
+
+/*内容页*/
+.categorybanner { position: relative;}
+.categorybanner img {width: 100%;}
+.pageContainer {border: 1px solid #eee; padding-right: 5px; padding-bottom: 30px; padding-top: 30px; margin-top: 98px;}
+.pageLeft {width: 225px; float: left; background: #ad0400; padding-bottom: 12px;}
+.pageRight {width: 940px; margin-left: 15px; float: left;}
+.leftNavTitle {height: 66px; line-height: 66px; font-size: 24px; color: #FFF; text-indent: 20px;  font-family: "黑体"}
+.aboutNav {padding-left: 12px;}
+.aboutNav ul{padding-right: 20px; background: #FFF;border-right: 1px solid #f9f9f9;}
+.aboutNav li{height: 50px; line-height: 50px; border-bottom: 1px solid #d2d2d2; text-indent: 25px;}
+.aboutNav li a {color: #999;}
+.aboutNav li.hover {border-left: 5px solid #ff9600; margin-left: -5px;}
+.aboutNav li.hover a { color: #b00400;}
+
+.crumbs {color: #b5b5b5; font-size: 18px;}
+.crumbs a{color: #b5b5b5; }
+.currentTitle {font-family: "黑体"; font-size: 24px; padding-top: 18px; border-bottom: 1px solid #d2d2d2; padding-bottom:25px; }
+.pageContent {padding:20px 0 50px 0; line-height: 24px;}
+
+.licheng {padding: 20px 0 50px 0;}
+.lichengList {overflow: hidden; padding: 10px 0; background: url(../images/lichengshu.jpg) 86px top repeat-y;}
+.lichengList .year {width:80px; float: left; padding-right: 30px; background:url(../images/lichengdian.jpg) right 10px no-repeat; text-indent: 10px; font-size: 18px; font-family: "黑体"; padding-top: 10px;}
+.lichengList .desc{float: left; width: 760px; background: #f6f6f6; line-height: 24px; padding:10px 10px;}
+
+.contact {padding:20px 0; position: relative;}
+.contactTitle {font-family: "黑体"; font-size: 24px; padding-top: 18px; border-bottom: 1px solid #d2d2d2; padding-bottom:25px; color: #ad0400;}
+
+.text_box, .textarea_box  {overflow: hidden;  margin-top: 40px;}
+.text_box label, .textarea_box label {color: #5d6268; font-size: 20px; width: 100px; float: left;}
+.text_box label {line-height: 56px;}
+.text_box input {border: 1px solid #d2d2d2; width: 400px; text-indent: 5px; font-size: 18px;}
+.text_box .text_input { height: 58px; line-height: 58px;}
+.textarea_box  textarea {height: 200px; width: 960px; line-height: 18px; padding-left: 5px;}
+.fasong {color: #5d6268;border-top: 1px solid #efefef; padding-top: 50px; margin-top: 60px;}
+.fasong span{color: #3fa4ec;}
+.submit {width: 140px; height: 50px; background: #ad0400; text-align: center; line-height: 50px; color: #FFF;font-size: 20px; border: none; margin-top: 30px;margin-left: 520px;}
+
+.banner_wenzibg{position: absolute; bottom:0px; right:0; width: 400px; height: 250px; background: #ad0400; opacity: 0.8; }
+.banner_wenzibox {position: absolute; bottom:-2px; right:0; width: 360px; height: 250px;border-bottom: 5px solid #fdb812; padding: 0 20px;}
+.renli_banner_title {font-size: 22px; color: #fff; text-align: center; margin-top: 30px; font-family: "微软雅黑"; border-bottom: 1px solid #FFF; padding-bottom: 20px;}
+.renli_banner_des {color: #fff; font-family: "微软雅黑"; padding: 20px 0; line-height: 22px;}
+
+.renlibox {display: flex; display: -webkit-flex; /* Safari */}
+.renlibox .renli_item {flex: 1; border-top-width: 10px; margin-top: 40px; height: 300px; padding: 0 20px; border-style: solid; background: #f6f6f6; position: relative;}
+.renlibox .item1{border-color: #ad0400;}
+.renlibox .item2{border-color: #fdb812;}
+.renlibox .item3{border-color: #efefef;}
+.renli_margin {width: 30px;}
+.renlibox .title {padding:30px 0; font-size: 24px; color: #000; font-family: "黑体"}
+.renlibox .con {font-size: 18px; color: #5c6167;  line-height: 26px;}
+.renlibox .href {position: absolute; text-align: right; bottom: 20px; float: right; width: 80%}
+.renlibox .href a { color: #ad0303; font-family: "微软雅黑";}
+.renlibox .gang {float: left;}
+.renlibox .zhaolist{float: left; margin-left: 10px;}
+.renlibox .zhaolist a{color: #4f608c;}
+.renlibox .zhaolist a:hover{color: #ad0400;}
+
+.zhaopinlist {background: #f1f1f1; padding:30px; margin-top: 30px;}
+.zhaopinlist .title {color: #000; font-family: "黑体"; font-size: 24px;}
+.zhaopinlist li {margin-top: 20px;}
+.zhaopinlist li .field {display: inline-block; width: 80px;}
+
+.zhaopinInfo {padding:20px 0;}
+.zhaopinInfo li{height: 50px; line-height: 50px; color: #5c6167; font-size: 20px;}
+.zhaopinInfo .field {display: inline-block; width: 100px;}
+.zhaopinInfo .moreInfo {line-height: 40px; margin-top: 40px;}

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<div id="top">
+		<div class="container">
+			<div class="index_search fr"><input type="text" name="index_search"></div>
+			<div class="language fr"><span><a href="">中文</a></span><span>|</span><span><a href="">English</a></span></div>
+		</div>
+	</div>
+
+	<div class="container nav">
+		<div class="logo fl"><img src="./images/logo.jpg" width="175" height="102"></div>
+		<div class="menu fr">
+			<ul>
+				<li class="first"><a href="">关于央视动画</a></li>
+				<li><a href="">动画家族</a></li>
+				<li><a href="">公司动态</a></li>
+				<li><a href="">行业资讯</a></li>
+				<li><a href="">市场运营</a>
+					<dl>
+						<dt><a href="">市场与经营</a></dt>
+						<dt><a href="">市场与经营</a></dt>
+					</dl>
+				</li>
+				<li><a href="">人力资源</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="categorybanner"><img src="./images/aboutbanner.jpg"></div>
+	<div class="container pageContainer">
+		<div class="pageLeft">
+			<div class="leftNavTitle">关于我们</div>
+			<div class="aboutNav">
+				<ul>
+					<li class="hover"><a href="">公司简介</a></li>
+					<li><a href="">公司简介</a></li>
+					<li><a href="">公司简介</a></li>
+					<li><a href="">公司简介</a></li>
+					<li><a href="">公司简介</a></li>
+				</ul>
+				
+			</div>
+		</div>
+		<div class="pageRight">
+			<div class="crumbs">
+				<a href="">关于央视动画</a> > 公司简介
+			</div>
+			<div class="currentTitle">公司简介</div>
+			<div class="pageContent">
+				<p>说的就是宽带连接圣诞快乐</p>
+				<p>说的就是宽带连接圣诞快乐</p>
+				<p>说的就是宽带连接圣诞快乐</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container footer_content">
+			<div class="foot_logo"><img src="./images/foot_logo.jpg" alt=""></div>
+			<div class="saoma">
+				<ul>
+					<li><img src="./images/foot_03.jpg" alt=""><p>官方微信</p></li>
+					<li><img src="./images/foot_03.jpg" alt=""><p>官方微博</p></li>
+				</ul>
+			</div>
+			<div class="foot_fenxiang">
+				<p class="fen_wenzi">分享到：</p>
+				<ul>
+					<li><img src="./images/foot_08.jpg" alt=""><p>QQ</p></li>
+					<li><img src="./images/foot_10.jpg" alt=""><p>微信</p></li>
+					<li><img src="./images/foot_12.jpg" alt=""><p>微博</p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="web_brief">
+			<p><span class="banquan">版权所有</span>：央视动漫集团有限公司 <span class="beian">备案号：京</span></p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+		// 导航下拉
+		$(function(){
+			$('.menu li').hover(function(){
+				$(this).find('dl').show();
+			}, function(){
+				$(this).find('dl').hide();
+			})
+		})
+
+	</script>
+</body>
+</html>
