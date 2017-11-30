@@ -185,3 +185,38 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .fengcai li img {vertical-align: top;}
 .fengcai li p {display:table; width:380px; height: 50px;  background: #f1f1f1; text-align: center; padding: 5px 10px;}
 .fengcai li p span{ display: table-cell; vertical-align: middle;}
+
+.dong_title {margin-top: 50px; height: 110px; background: url(../images/dong_05.jpg) no-repeat center bottom;}
+.dong_list {overflow: hidden; margin-left: -50px; text-align: center; padding-top: 30px;}
+.dong_list img {width: 216px; height: 216px; border-radius: 50%; border: 1px solid #eee;}
+.dong_list li{ float: left; width: 216px; height: 320px; margin-left: 90px; }
+.dong_list li .title{font-weight: bold; margin-top: 10px;}
+.dong_list li .des { line-height: 22px; color: #999; padding-top: 6px;}
+.more_dong  {text-align: center; margin-top: 30px;}
+.more_dong button {background: #fff; border: 1px solid #bfbfbf; padding: 5px 20px; font-size: 24px; color: #989898; cursor: pointer;}
+
+.dong_container {margin-top: -160px; position: relative; z-index: 1000; border: 20px solid rgba(210,190,170,0.5); background: #FFF; padding: 50px; width: 1100px; font-size: 24px; line-height: 34px;}
+.dong_container .param .label, .brief .label{color: #999}
+.dong_container .param .value {font-weight: bold; margin-right: 30px;}
+.dong_container .shou, .dong_container .chakan {color: #b00402; cursor: pointer; margin-left: 10px;}
+.dong_container .shou {background: url(../images/jians.jpg) no-repeat right center; padding-right: 25px; display: none}
+.dong_container .chakan {background: url(../images/jianx.jpg) no-repeat right center; padding-right: 25px;}
+
+.dong_container .title { color: #af0400; font-size: 28px;  font-family: "微软雅黑"; text-align: center; margin-top: 40px;}
+.dong_container .title_en {color: #af0400; text-align: center; background: url(../images/dongx_05.jpg) no-repeat center 5px; height: 35px; line-height: 35px; margin-top: 15px; font-family: "黑体"; font-size: 18px;}
+.dong_container .imglist ul {overflow: hidden; margin-left: -70px;}
+.dong_container .imglist li {width: 320px; float: left; margin-left: 70px; height: 400px; margin-top: 30px;}
+.dong_container img {vertical-align: top;}
+
+.dong_container li p {display:table; width:300px; background: #f1f1f1; text-align: center; padding: 5px 10px; font-size: 18px;}
+.dong_container li p span{ display: table-cell; vertical-align: middle;}
+
+.dong_yansheng_box {position: relative; height: 550px; margin-top: 30px;}
+.dong_yansheng_box .yanshi_1{position: absolute; top: 0; left: 0;}
+.dong_yansheng_box .yanshi_2{position: absolute; top: 0; left: 420px;}
+.dong_yansheng_box .yanshi_3{position: absolute; top: 0; left: 687px;}
+.dong_yansheng_box .yanshi_4{position: absolute; width: 25px; height: 266px; top: 0; right: 10px; background: url(../images/yansheng_06.jpg) no-repeat right bottom;}
+.dong_yansheng_box .yanshi_5{position: absolute; width: 25px; height: 266px; top: 274px; left: 0; background: url(../images/yansheng_08.jpg) no-repeat right bottom;}
+.dong_yansheng_box .yanshi_6{position: absolute; top: 275px; left: 149px;}
+.dong_yansheng_box .yanshi_7{position: absolute; top: 376px; left: 420px;}
+.dong_yansheng_box .yanshi_8{position: absolute; top: 266px; left: 687px;}
