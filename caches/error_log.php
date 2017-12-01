@@ -162,3 +162,58 @@
 <?php exit;?>11-16 16:40:53 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
 <?php exit;?>11-16 16:41:11 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
 <?php exit;?>11-16 20:47:03 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-28 14:34:53 | 2 | extract() expects parameter 1 to be array, null given | phpcms/modules/content/classes/html.class.php | 182
+<?php exit;?>11-28 14:35:06 | 2 | extract() expects parameter 1 to be array, null given | phpcms/modules/content/classes/html.class.php | 182
+<?php exit;?>11-28 14:34:41 | 2 | fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to tool.phpcms.cn:80 (Connection timed out) | phpcms/libs/classes/http.class.php | 84
+<?php exit;?>11-28 14:34:47 | 2 | fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to tool.phpcms.cn:80 (Connection timed out) | phpcms/libs/classes/http.class.php | 84
+<?php exit;?>11-28 14:35:18 | 2 | extract() expects parameter 1 to be array, null given | phpcms/modules/content/classes/html.class.php | 182
+<?php exit;?>11-28 14:35:00 | 2 | fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to tool.phpcms.cn:80 (Connection timed out) | phpcms/libs/classes/http.class.php | 84
+<?php exit;?>11-28 16:56:21 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-28 16:56:32 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-28 20:16:06 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-28 20:16:20 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-28 20:16:48 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-28 21:49:53 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-29 17:19:23 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 13:41:44 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields//config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:19:04 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:19:05 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:20:44 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:20:51 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:21:32 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:21:43 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 14:21:48 | 2 | require(/home/shengli/workspace/www/yangshi/phpcms/modules/content/fields/donghuaImages/config.inc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory | phpcms/modules/content/sitemodel_field.php | 207
+<?php exit;?>11-30 15:23:52 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 15:38:32 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 15:40:45 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 19:55:26 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_edit_form.inc.php | 4
+<?php exit;?>11-30 19:55:52 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_add_form.inc.php | 3
+<?php exit;?>11-30 19:55:54 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_add_form.inc.php | 3
+<?php exit;?>11-30 19:56:21 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_add_form.inc.php | 3
+<?php exit;?>11-30 19:56:22 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_add_form.inc.php | 3
+<?php exit;?>11-30 20:20:04 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 20:28:40 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 20:32:27 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 20:37:21 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 21:39:13 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 15
+<?php exit;?>11-30 21:39:13 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 16
+<?php exit;?>11-30 21:39:13 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 17
+<?php exit;?>11-30 21:39:13 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 18
+<?php exit;?>11-30 21:39:13 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 19
+<?php exit;?>11-30 21:39:29 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 15
+<?php exit;?>11-30 21:39:29 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 16
+<?php exit;?>11-30 21:39:29 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 17
+<?php exit;?>11-30 21:39:29 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 18
+<?php exit;?>11-30 21:39:29 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 19
+<?php exit;?>11-30 21:39:49 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 16
+<?php exit;?>11-30 21:39:49 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 17
+<?php exit;?>11-30 21:39:49 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 18
+<?php exit;?>11-30 21:39:49 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 19
+<?php exit;?>11-30 21:39:49 | 2 | explode() expects parameter 2 to be string, array given | caches/caches_template/default/content/show_donghua.php | 20
+<?php exit;?>11-30 21:53:31 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>11-30 22:27:22 | 2 | explode() expects parameter 2 to be string, array given | phpcms/libs/classes/db_mysqli.class.php | 135
+<?php exit;?>11-30 22:27:22 | 2 | array_walk() expects parameter 1 to be array, null given | phpcms/libs/classes/db_mysqli.class.php | 136
+<?php exit;?>11-30 22:27:22 | 2 | implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed | phpcms/libs/classes/db_mysqli.class.php | 137
+<?php exit;?>12-01 13:30:21 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_edit_form.inc.php | 4
+<?php exit;?>12-01 17:56:45 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_edit_form.inc.php | 4
+<?php exit;?>12-01 21:28:21 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364

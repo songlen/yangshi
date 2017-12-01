@@ -1,0 +1,42 @@
+{template "content", "header"}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container pageContainer">
+		<div class="pageLeft">
+			<div class="leftNavTitle">关于我们</div>
+			<div class="aboutNav">
+				<ul>
+					{pc:content action="category" catid="1" num="25" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+					<li {if $r[catid] == $catid} class="hover"{/if}><a href="{$r[url]}">{$r[catname]}</a></li>
+					{/loop}
+					{/pc}
+				</ul>
+				
+			</div>
+		</div>
+		<div class="pageRight">
+
+			<div class="crumbs">
+				{catpos($catid)}
+			</div>
+			<div class="currentTitle">{$CATEGORYS[$catid][catname]}</div>
+			<div class="pageContent">
+				{$content}
+			</div>
+		</div>
+	</div>
+{template "content", "footer"}
+<script type="text/javascript">
+	if(GetQueryString('catid')=='1'){
+		var url = window.location.href.replace('catid=1', 'catid=2');
+		window.location.href=url
+	}
+	function GetQueryString(name)
+	{
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	}
+</script>
+</body>
+</html>

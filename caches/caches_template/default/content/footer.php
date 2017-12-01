@@ -83,3 +83,16 @@
 	
 
 </script>
+
+
+<script type="text/javascript">
+	// 导航下拉
+	$(function(){
+		$('.menu li').hover(function(){
+			$(this).find('dl').show();
+		}, function(){
+			$(this).find('dl').hide();
+		})
+	})
+
+</script>

@@ -30,7 +30,7 @@
 				
 			</div>
 			<div class="index_news_tab_box" style="display: block;">
-				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=3f352e7a37b595f5aa4fa61510fb486b&sql=SELECT+url%2C+inputtime%2C+title%2C+description+from+v9_news+where+catid+in%2810%2C11%29+and+status%3D99+order+by+id+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT url, inputtime, title, description from v9_news where catid in(10,11) and status=99 order by id DESC LIMIT 3");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
+				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=5b02b0f2577b37ed2f7ebc19a5123229&sql=SELECT+url%2C+inputtime%2C+title%2C+description+from+v9_news+where+status%3D99+order+by+id+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT url, inputtime, title, description from v9_news where status=99 order by id DESC LIMIT 3");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
 
 				<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 				<div class="news_content overflow">
@@ -48,7 +48,7 @@
 			</div>
 			<div class="index_news_tab_box">
 				
-				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=fb180cf4c97f36818b243d0d8b8b781f&action=lists&catid=10&order=id+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'10','order'=>'id DESC','limit'=>'3',));}?>
+				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=2de64f9c643eeba15a2829903c5c0494&action=lists&catid=22&order=id+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'22','order'=>'id DESC','limit'=>'3',));}?>
 				<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 				<div class="news_content overflow">
 					<div class="date fl">
@@ -66,7 +66,7 @@
 			<div class="index_news_tab_box">
 				
 				
-				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7c53cf11e7bc0905b3a8a812ce6bf476&action=lists&catid=11&order=id+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'11','order'=>'id DESC','limit'=>'3',));}?>
+				<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7baf742c55433bb48a0495be3e6ca333&action=lists&catid=26&order=id+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'26','order'=>'id DESC','limit'=>'3',));}?>
 				<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 				<div class="news_content overflow">
 					<div class="date fl">

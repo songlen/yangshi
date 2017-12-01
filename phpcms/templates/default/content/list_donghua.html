@@ -1,0 +1,19 @@
+{template 'content','header'}
+	<div class="categorybanner"><img src="{APP_PATH}statics/default/images/dong_02.jpg"></div>
+	<div class="container">
+		<div class="dong_title"></div>
+		<ul class="dong_list">
+			{pc:content action="lists" catid="$catid" num="12"}
+			{loop $data $r}
+			<li><a href="{$r[url]}"><img src="{thumb($r[thumb])}" alt="" width="216" height="216"></a>
+				<div class="title"><a href="{$r[url]}">{$r[title]}</a></div>
+				<div class="des">{$r[list_des]}</div>
+			</li>
+			{/loop}
+			{/pc}
+		</ul>
+		<div class="more_dong"><button type="button">加载更多</button></div>
+	</div>
+{template 'content','footer'}
+</body>
+</html>

@@ -26,6 +26,7 @@ $fields = array('text'=>'单行文本',
 				'omnipotent'=>'万能字段',
 				'video'=>'视频库',
 				'videofile' => '视频上传',
+				'images_dong' => '动画详情图片',
 				);
 //不允许删除的字段，这些字段讲不会在字段添加处显示
 $not_allow_fields = array('catid','typeid','title','keyword','posid','template','username');

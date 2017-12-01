@@ -12,6 +12,12 @@ return array (
     'name' => '公司动态',
     'sort' => '0',
   ),
+  17 => 
+  array (
+    'typeid' => '65',
+    'name' => '时间轴',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

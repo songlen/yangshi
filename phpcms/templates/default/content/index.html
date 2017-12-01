@@ -30,7 +30,7 @@
 				
 			</div>
 			<div class="index_news_tab_box" style="display: block;">
-				{pc:get sql="SELECT url, inputtime, title, description from v9_news where catid in(10,11) and status=99 order by id DESC" num="3"}
+				{pc:get sql="SELECT url, inputtime, title, description from v9_news where status=99 order by id DESC" num="3"}
 
 				{loop $data $r}
 				<div class="news_content overflow">
@@ -48,7 +48,7 @@
 			</div>
 			<div class="index_news_tab_box">
 				
-				{pc:content  action="lists" catid="10" order="id DESC" num="3"}
+				{pc:content  action="lists" catid="22" order="id DESC" num="3"}
 				{loop $data $r}
 				<div class="news_content overflow">
 					<div class="date fl">
@@ -66,7 +66,7 @@
 			<div class="index_news_tab_box">
 				
 				
-				{pc:content  action="lists" catid=11" order="id DESC" num="3"}
+				{pc:content  action="lists" catid=26" order="id DESC" num="3"}
 				{loop $data $r}
 				<div class="news_content overflow">
 					<div class="date fl">
