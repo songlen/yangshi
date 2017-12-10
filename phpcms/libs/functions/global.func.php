@@ -1530,6 +1530,8 @@ function seo($siteid, $catid = '', $title = '', $description = '', $keyword = ''
 	foreach ($seo as $k=>$v) {
 		$seo[$k] = str_replace(array("\n","\r"),	'', $v);
 	}
+	$seo['copyright'] = $site['copyright'];
+	$seo['beian'] = $site['beian'];
 	return $seo;
 }
 

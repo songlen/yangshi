@@ -1,0 +1,28 @@
+
+{template 'content', 'header'}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container contact">
+		<div class="crumbs">
+			{catpos($catid)}
+		</div>
+		<div class="contactTitle">{$title}</div>
+		<div class="pagecontainer">
+			<div class="zhaopinInfo">
+				<ul>
+					<li><span class="field">职位性质</span> <span>{$position_natrue}</span></li>
+					<li><span class="field">招聘人数</span> <span>{$people_nums}</span></li>
+					<li><span class="field">工作经验</span> <span>{$experience}</span></li>
+					<li><span class="field">工资待遇</span> <span>{$treatment}</span></li>
+					<li><span class="field">工作地点</span> <span>{$location}</span></li>
+					<li><span class="field">职位特点</span> <span>{$characteristic}</span></li>
+					<li><span class="field">发布时间</span> <span>{date('Y-m-d', strtotime($inputtime))}</span></li>
+				</ul>
+				<div class="moreInfo">
+					{$content}
+				</div>
+			</div>
+		</div>
+	</div>
+{template 'content', 'footer'}
+</body>
+</html>

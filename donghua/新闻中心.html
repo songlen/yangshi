@@ -1,0 +1,146 @@
+{template 'content', 'header'}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container news_container">
+		<div class="title_zh">台、总公司要闻</div>
+		<div class="title_en">NEWS DYNAMIC</div>
+	</div>
+	<div class="news_bg">
+		<div class="container news_container">
+			<div class="news_one">
+				<ul>
+					{pc:content action="lists" num='3' catid="$catid"}
+					{loop $data $r}
+					<li>
+						<div class="date fl">
+							<p class="day">{date('d', $r[inputtime])}</p>
+							<p class="year">{date('Y', $r[inputtime])}</p>
+						</div>
+						<div class="news_info fl">
+							<p class="title"><a href="">{$r[title]}</a></p>
+							<p class="brief">{$r[description]}</p>
+						</div>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+				<div class="more"><a href="">MORE</a></div>
+			</div>
+		
+		</div>	
+	</div>
+	<div class="container news_container">
+		<div class="title_zh">公司新闻</div>
+		<div class="title_en">THE NEWS</div>
+		<div class="company_news">
+			<ul>
+				<li class="first">
+					<img src="./images/news_03.jpg" width="300" height="240" alt="">
+					<div class="title"><a href="">圣诞节快乐说的建设大街收绩开史牒加快速度</a></div>
+					<div class="info">sdjksd 圣诞节快乐的圣诞节快乐数据库数量的说的就是看到了数据库数量的圣诞快乐框架时的洛杉矶私搭乱建圣诞节快乐设计的</div>
+				</li>
+				<li class="second">
+					<img src="./images/news_03.jpg" width="300" height="240" alt="">
+					<div class="title"><a href="">圣诞节快乐说的建设大街收绩开史牒加快速度</a></div>
+					<div class="info">sdjksd 圣诞节快乐的圣诞节快乐数据库数量的说的就是看到了数据库数量的圣诞快乐框架时的洛杉矶私搭乱建圣诞节快乐设计的</div>
+				</li>
+				<li class="third">
+					<img src="./images/news_05.jpg" width="598" height="300" alt="">
+					<div class="title"><a href="">圣诞节快乐说的建设大街收绩开史牒加快速度</a></div>
+					<div class="info">sdjksd 圣诞节快乐的圣诞节快乐数据库数量的说的就是看到了数据库数量的圣诞快乐框架时的洛杉矶私搭乱建圣诞节快乐设计的</div>
+				</li>
+			</ul>
+		</div>
+		<div class="more"><a href="">MORE</a></div>
+		<div class="title_zh">公司动态</div>
+		<div class="title_en">Company News</div>
+		<div class="company_dongt">
+			<ul>
+				<li>
+					<a href=""><img src="./images/news_13.jpg" width="380" height="247" alt=""></a>
+					<div class="title">数量及设计电商啥动静</div>
+					<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+				</li>
+				<li>
+					<img src="./images/news_13.jpg" width="380" height="247" alt="">
+					<div class="title">数量及设计电商啥动静</div>
+					<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+				</li>
+				<li>
+					<img src="./images/news_13.jpg" width="380" height="247" alt="">
+					<div class="title">数量及设计电商啥动静</div>
+					<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+				</li>
+			</ul>
+		</div>
+		<div class="more"><a href="">MORE</a></div>
+		<div class="title_zh">党群工作</div>
+		<div class="title_en">Party Work</div>
+		<div class="dangqun">
+			<ul>
+				<li><a href=""><img src="./images/news_13.jpg" width="380" height="247" alt=""></a></li>
+				<li><img src="./images/news_13.jpg" width="380" height="247" alt=""></li>
+				<li><img src="./images/news_13.jpg" width="380" height="247" alt=""></li>
+			</ul>
+		</div>
+
+		<div class="more"><a href="">MORE</a></div>
+		<div class="title_zh">交流合作</div>
+		<div class="title_en">Exchange And Cooperation</div>
+		<div class="company_dongt">
+			<ul>
+				<li>
+					<a href=""><img src="./images/news_13.jpg" width="380" height="247" alt=""></a>
+					<div class="title">数量及设计电商啥动静</div>
+					<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+				</li>
+				<li>
+					<img src="./images/news_13.jpg" width="380" height="247" alt="">
+					<div class="title">数量及设计电商啥动静</div>
+					<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+				</li>
+				<li>
+					<img src="./images/news_13.jpg" width="380" height="247" alt="">
+					<div class="title">数量及设计电商啥动静</div>
+					<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+				</li>
+			</ul>
+		</div>
+		<div class="more"><a href="">MORE</a></div>
+		<div class="threeNews">
+			<ul>
+				<li>
+					<div class="tit">动画影视资讯</div>
+					<div class="libg">
+						<a href=""><img src="./images/news_13.jpg" width="380" height="247" alt=""></a>
+						<div class="title">数量及设计电商啥动静</div>
+						<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+						
+					</div>
+					<div class="more"><a href="">MORE</a></div> 
+				</li>
+				<li>
+					<div class="tit">动画影视资讯</div>
+					<div class="libg">
+						<a href=""><img src="./images/news_13.jpg" width="380" height="247" alt=""></a>
+						<div class="title">数量及设计电商啥动静</div>
+						<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+						
+					</div>
+					<div class="more"><a href="">MORE</a></div>
+				</li>
+				<li>
+					<div class="tit">动画影视资讯</div>
+					<div class="libg">
+						<a href=""><img src="./images/news_13.jpg" width="380" height="247" alt=""></a>
+						<div class="title">数量及设计电商啥动静</div>
+						<div class="info">数据库都是看啥动静开始打圣诞节看电视就四大皆空胜利大街啥动静看手机四大皆空类似的收到了开机时</div>
+						
+					</div>
+					<div class="more"><a href="">MORE</a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+{template 'content', 'footer'}
+</body>
+</html>

@@ -1,174 +1,177 @@
 {template "content","header"}
-<!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="news-hot">
-        	<div class="content">
-        	{pc:content  action="position" posid="2" order="listorder DESC" num="4"}
-        	 {loop $data $r}
-                <h4 class="blue"><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],36,'')}</a></h4>
-                <p>{if $n==1}<img src="{thumb($r[thumb],90,60)}" width="90" height="60"/>{/if}{str_cut($r[description],112)}</p>
-                <div class="bk20 hr"><hr /></div>
-               {/loop}  
-             {/pc}   
-            </div>
-        </div>
-        <div class="slide">
-            <div class="FocusPic">
-            {pc:content  action="position" posid="1"  order="listorder DESC" thumb="1" num="5"}
-            	<div class="content" id="main-slide">
-                    <div class="changeDiv">  
-                    {loop $data $r}
-                        <a href="{$r['url']}" title="{str_cut($r['title'],30)}"><img src="{thumb($r['thumb'],310,260)}" alt="{$r['title']}" width="310" height="260" /></a>
-                    {/loop}
-                    </div>
-                </div>
-            {/pc}
-            </div>
-            <div class="bk10"></div>
-        	<div class="box extend">
-            	<div class="col-left">争议</div>
-                <div class="col-auto">
-				{pc:block pos="index_block_1"}{/pc}
-				</div>
-                <script language="javascript" src="{APP_PATH}caches/poster_js/10.js"></script>
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        		<h5>图片新闻</h5>
-          {pc:content  action="position" posid="12" thumb="1" order="listorder DESC" num="10"}
-            <ul class="content news-photo picbig">
-             {loop $data $r}
-            	<li>
-                    <div class="img-wrap">
-                        <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],110,0)}" title="{$r[title]}"/></a>
-                    </div>
-                    <a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],20)}</a>
-                </li>
-                {/loop}
-            </ul>
-            {/pc}
-        </div>
-        <div class="bk10"></div>
-        {loop subcat(0,0,0,$siteid) $r}
-        {php $num++}
-        <div class="box cat-area" {if $num%2!=0}style=" margin-right:10px"{/if}>
-        		<h5 class="title-1">{$r[catname]}<a href="{$r[url]}" class="more">更多>></a></h5>
-             <div class="content">
-             {pc:content  action="lists" catid="$r[catid]" order="updatetime DESC" thumb="1" num="1" return="info"}
-             {loop $info $v}
-             	<p>
-             		<img src="{thumb($v[thumb],90,0)}" width="90" height="60"/>
-                    <strong><a href="{$v['url']}" target="_blank" title="{$v['title']}"{title_style($v[style])}>{str_cut($v['title'],28)}</a></strong><br />{str_cut($v['description'],100)}
-                </p>
-              {/loop}
-              {/pc}                
-                <div class="bk15 hr"></div>
-                {pc:content action="lists" catid="$r[catid]" num="5" order="id DESC" return="info"}
+	<div class="jq22-container">
 
-                <ul class="list lh24 f14">
-                {loop $info $v}
-                	<li>·<a href="{$v['url']}" target="_blank" title="{$v['title']}"{title_style($v[style])}>{str_cut($v['title'],40)}</a></li>
-                {/loop}
-                </ul>
-                {/pc}
-            </div>
-        </div>
-        {if $num%2==0}<div class="bk10"></div>{/if}
-		{/loop}
-    </div>
-    <div class="col-auto">
-    	<div class="box">
-        	 <h5 class="title-2">公告<a href="" class="more">&nbsp;</a></h5>
-             <div class="content">
-                {pc:announce  action="lists" siteid="$siteid" num="2"}
-                <ul class="list lh24 f14">
-                   {loop $data $r}
-                     <li> <a href="{APP_PATH}index.php?m=announce&c=index&a=show&aid={$r['aid']}">{$r['title']}</a></li>
-                   {/loop}
-                </ul>
-                {/pc}
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-        	<h5 class="title-2">专题<a href="{APP_PATH}index.php?m=special&c=index&a=special&siteid={$siteid}" class="more">更多>></a></h5>
-            <div class="content special">
-            {pc:special  action="lists" siteid="$siteid" elite="1" listorder="3" num="2"}
-            {loop $data $r}
-            	{if $n!=1}<div class="hr bk15"></div>{/if}
-                <p style="margin:0">
-             		<a href="{$r[url]}"><img src="{$r[thumb]}" width="90" height="70" /></a>
-                    <strong><a href="{$r[url]}">{str_cut($r[title],'18')}</a></strong><br />{str_cut($r['description'],50)}
-                </p>
-            {/loop}
-            {/pc}
-            </div>
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2"><span class="rt fn f12 tab SwapTab"><span class="fb">热点</span> | <span >评论</span> | <span>关注</span></span>排行</h5>
-            <div class="tab-content">
-            <ul class="content digg">
-			{pc:content action="hits" catid="6" num="10" order="views DESC"}
+		<div class="flexslider">
+			<ul class="slides">
+			{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 11 AND disabled=0 ORDER BY listorder ASC"}
 				{loop $data $r}
-					<li><a href="{$r[url]}" target="_blank" title="{$r[title]}"{title_style($r[style])}>{$r[title]}</a></li>
+				<?php 
+					$r = json_decode($r['setting'], true);
+					$r = $r[1];
+				?>
+				<li><a href="{$r[linkurl]}"><img src="{$r[imageurl]}"></a></li>
 				{/loop}
 			{/pc}
-            </ul>
-            <ul class="content digg hidden">
-			{pc:comment action="bang" num="10" cache="3600"}
+			</ul>
+		</div>
+		
+	</div>
+	<!-- <div class="index_news_title"></div> -->
+	<div class="index_title_zh">新闻动态</div>
+	<div class="index_title_en">NEWS DYNAMIC</div>
+	<div class="container index_news_box">
+		<div class="index_video fl">{pc:block pos="index_video"}{/pc}</div>
+		<div class="index_news fr">
+			<div class="overflow">
+				<div class="more_news"><a href="{$CATEGORYS[10][url]}">MORE</a></div>
+				<ul class="index_news_tab">
+					<li class="hover">最新</li>
+					<li>公司动态</li>
+					<li>行业资讯</li>
+				</ul>
+				
+			</div>
+			<div class="index_news_tab_box" style="display: block;">
+				{pc:get sql="SELECT url, inputtime, title, description from v9_news where status=99 order by id DESC" num="3"}
+
 				{loop $data $r}
-					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				<div class="news_content overflow">
+					<div class="date fl">
+						<p class="day">{date('d', $r[inputtime])}</p>
+						<p class="year">{date('Y.m', $r[inputtime])}</p>
+					</div>
+					<div class="news_info fl">
+						<p class="title"><a href="{$r[url]}">{$r[title]}</a></p>
+						<p class="brief">{$r['description']}</p>
+					</div>
+				</div>
 				{/loop}
-			{/pc}
-            </ul>
-            <ul class="content digg hidden">
-			{pc:content action="hits" catid="6" num="10" order="views DESC"}
+				{/pc}
+			</div>
+			<div class="index_news_tab_box">
+				
+				{pc:content  action="lists" catid="22" order="id DESC" num="3"}
 				{loop $data $r}
-					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				<div class="news_content overflow">
+					<div class="date fl">
+						<p class="day">{date('d', $r[inputtime])}</p>
+						<p class="year">{date('Y.m', $r[inputtime])}</p>
+					</div>
+					<div class="news_info fl">
+						<p class="title"><a href="{$r[url]}">{$r[title]}</a></p>
+						<p class="brief">{$r['description']}</p>
+					</div>
+				</div>
 				{/loop}
-			{/pc}
-            </ul>
-            </div>
-        </div><div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">调查问卷<a href="{APP_PATH}index.php?m=vote&c=index&siteid={$siteid}" class="more">更多>></a></h5>
- 
-<script language="javascript" src="{APP_PATH}index.php?m=vote&c=index&a=show&action=js&subjectid=1&type=3"></script>
-        </div>
-    </div>
-    <div class="bk10"></div>
-	
-	<div class="box blogroll ylink">
-    	<h5><a href="{APP_PATH}index.php?m=link&siteid={$siteid}" hidefocus="true" class="rt">更多>></a>友情链接<a href="{APP_PATH}index.php?m=link&c=index&a=register&siteid={$siteid}" class="red">申请链接</a></h5>
-        <div class="bk10"></div>
-	<ul class="colli imgul">
-        {pc:link  action="type_list" siteid="$siteid" linktype="1" order="listorder DESC" num="8" return="pic_link"}
-        {loop $pic_link $v}
-        <li><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}" width="88" height="31" /></a></li>
-        {/loop}
-        {/pc}
-    </ul>
-     {pc:link  action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
-     <div class="bk10"></div>
-	<div class="linka">
-		{loop $dat $v}
-              {if $type==0}
-              <a href="{$v[url]}" target="_blank">{$v[name]}</a> |
-              {else}
-              <a href="{$v[url]}" target="_blank"><img src="{$v[logo]}" width="88" height="31" style="border: 1px solid #FFBE7A;"></a> 
-              {/if}
-		{/loop}
- 	</div>
-	{/pc}
-</div>
-</div>
-<script type="text/javascript"> 
-$(function(){
-	new slide("#main-slide","cur",310,260,1);//焦点图
-	new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
-})
-</script>
+				{/pc}
+			</div>
+			<div class="index_news_tab_box">
+				
+				
+				{pc:content  action="lists" catid=26" order="id DESC" num="3"}
+				{loop $data $r}
+				<div class="news_content overflow">
+					<div class="date fl">
+						<p class="day">{date('d', $r[inputtime])}</p>
+						<p class="year">{date('Y.m', $r[inputtime])}</p>
+					</div>
+					<div class="news_info fl">
+						<p class="title"><a href="{$r[url]}">{$r[title]}</a></p>
+						<p class="brief">{$r['description']}</p>
+					</div>
+				</div>
+				{/loop}
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<!-- <div class="index_donghua_title"></div> -->
+	<div class="index_title_zh">动态家族</div>
+	<div class="index_title_en">ANIMATION FAMILY</div>
+	<div class="donghuabg">
+		<div id="LoopDiv" style="margin-top: 80px;">
+			<input id="S_Num" type="hidden" value="8" />
+			<div id="starsIF" class="imageflow">
+				{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 12 AND disabled=0 ORDER BY listorder ASC"}
+					{loop $data $r}
+					<?php 
+						$r = json_decode($r['setting'], true);
+						$r = $r[1];
+					?>
+					<img src="{$r[imageurl]}" longdesc="{$r[linkurl]}" width="280" height="300" />
+					{/loop}
+				{/pc}	
+			</div>
+		</div>
+
+		<!-- <div class="index_yansheng_title"></div> -->
+		<div class="index_title_zh">衍生相关</div>
+		<div class="index_title_en">DERIVATIVES</div>
+		<div class="container">
+			<div class="index_yansheng_box">
+				<ul>
+					<li class="yanshi_1"><a href=""><img src="{APP_PATH}statics/default/images/index_26.jpg" alt=""></a></li>
+					<li class="yanshi_2"><a href=""><img src="{APP_PATH}statics/default/images/index_27.jpg" alt=""></a></li>
+					<li class="yanshi_3"><a href=""><img src="{APP_PATH}statics/default/images/index_28.jpg" alt=""></a></li>
+					<li class="yanshi_4"><a href=""><img src="{APP_PATH}statics/default/images/index_33.jpg" alt=""></a></li>
+					<li class="yanshi_5"><a href=""><img src="{APP_PATH}statics/default/images/index_34.jpg" alt=""></a></li>
+					<li class="yanshi_6"><a href=""><img src="{APP_PATH}statics/default/images/index_30.jpg" alt=""></a></li>
+					{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 1 AND disabled=0 ORDER BY listorder ASC"}
+					{loop $data $n $r}
+					<?php 
+						$r = json_decode($r['setting'], true);
+						$r = $r[1];
+					?>
+					<li class="yanshi_{$n+1}"><a href="{$r[linkurl]}"><img src="{$r[imageurl]}" alt="{$r[alt]}"></a></li>
+					{/loop}
+					{/pc}	
+					<li class="yanshi_7"></li>
+					<li class="yanshi_8"></li>
+				</ul>
+			</div>
+			<!-- <div class="index_yansheng_more"><a href="">MORE</a></div> -->
+		</div>
+		{pc:get sql="SELECT setting FROM phpcms_poster WHERE spaceid = 13 AND disabled=0 ORDER BY listorder ASC" num="1"}
+			{loop $data $r}
+			<?php 
+				$r = json_decode($r['setting'], true);
+				$r = $r[1];
+			?>
+			<img class="bgimg" src="{$r[imageurl]}" />
+			{/loop}
+		{/pc}						
+	</div>
 {template "content","footer"}
+
+	
+	<script type="text/javascript">
+
+
+		// 首页新闻切换
+		$(function(){
+			$('.index_news_tab li').mouseover(function(){
+				$(this).addClass('hover').siblings().removeClass('hover');
+				$('.index_news_tab_box').hide();
+				$('.index_news_tab_box').eq($(this).index()).show();
+			})
+		})
+	</script>
+
+	<!-- 首页轮播图 -->
+	<script type="text/javascript" src="{APP_PATH}statics/default/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.flexslider').flexslider({
+				directionNav: true,
+				pauseOnAction: false,
+				slideshowSpeed: 4000,
+				animationDuration: 1000,
+			});
+		});
+	</script>
+
+	<!-- 3D轮播图 -->
+
+    <script type="text/javascript" src="{APP_PATH}statics/default/js/imageflow.js"></script>
+</body>
+</html>

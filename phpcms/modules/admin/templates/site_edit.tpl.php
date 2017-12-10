@@ -32,9 +32,17 @@ include $this->admin_tpl('header');
     <th><?php echo L('site_dirname')?>：</th>
     <td class="y-bg"><?php if ($siteid == 1) { echo $data['dirname'];} else {?><input type="text" class="input-text" name="dirname" id="dirname" size="30" value="<?php echo $data['dirname']?>" /><?php }?></td>
   </tr>
-    <tr>
+  <tr>
     <th><?php echo L('site_domain')?>：</th>
     <td class="y-bg"><input type="text" class="input-text" name="domain" id="domain"  size="30" value="<?php echo $data['domain']?>" /></td>
+  </tr>
+  <tr>
+    <th>版权所有：</th>
+    <td class="y-bg"><input type="text" class="input-text" name="copyright" id="copyright"  size="30" value="<?php echo $data['copyright'];?>" /></td>
+  </tr>
+  <tr>
+    <th>备案：</th>
+    <td class="y-bg"><input type="text" class="input-text" name="beian" id="beian"  size="30" value="<?php echo $data['beian'];?>" /></td>
   </tr>
 </table>
 </fieldset>

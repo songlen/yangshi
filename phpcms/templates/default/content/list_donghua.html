@@ -2,7 +2,7 @@
 	<div class="categorybanner"><img src="{APP_PATH}statics/default/images/dong_02.jpg"></div>
 	<div class="container">
 		<div class="dong_title"></div>
-		<ul class="dong_list">
+		<ul class="dong_list" id="dongList">
 			{pc:content action="lists" catid="$catid" num="12"}
 			{loop $data $r}
 			<li><a href="{$r[url]}"><img src="{thumb($r[thumb])}" alt="" width="216" height="216"></a>
@@ -12,8 +12,42 @@
 			{/loop}
 			{/pc}
 		</ul>
-		<div class="more_dong"><button type="button">加载更多</button></div>
+		<!-- <div class="more_dong"><button type="button">加载更多</button></div> -->
 	</div>
 {template 'content','footer'}
+
+	<link rel="stylesheet" type="text/css" href="{APP_PATH}statics/plugin/layui/css/layui.css">
+	<script type="text/javascript" src="{APP_PATH}statics/plugin/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use('flow', function(){
+			var $ = layui.jquery; //不用额外加载jQuery，flow模块本身是有依赖jQuery的，直接用即可。
+			var flow = layui.flow;
+			flow.load({
+				elem: '#dongList', //指定列表容器
+				isAuto: false,
+				end: '没有更多数据',
+				done: function(page, next){ //到达临界点（默认滚动触发），触发下一页
+					var lis = [];
+					//以jQuery的Ajax请求为例，请求下一页数据（注意：page是从2开始返回）
+					$.get(window.location.origin+'/api.php?op=donghua&action=getMoreLists&page='+page, function(res){
+						res = JSON.parse(res);
+						//假设你的列表返回在data集合中
+						layui.each(res.data, function(index, item){
+							
+							var html = '';
+							html += '<li><a href="'+item.url+'"><img src="'+item.thumb+'" alt="" width="216" height="216"></a>';
+							html += '<div class="title"><a href="'+item.url+'">'+item.title+'</a></div>';
+							html += '<div class="des">'+item.list_des+'</div>';
+							html += '</li>';
+							lis.push(html);
+						}); 
+						//执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+						//pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+						next(lis.join(''), page < res.pages);  
+					});
+				}
+			});	
+		});
+	</script>
 </body>
 </html>

@@ -217,3 +217,67 @@
 <?php exit;?>12-01 13:30:21 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_edit_form.inc.php | 4
 <?php exit;?>12-01 17:56:45 | 2 | Invalid argument supplied for foreach() | phpcms/modules/content/fields/videofile/field_edit_form.inc.php | 4
 <?php exit;?>12-01 21:28:21 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>12-01 22:13:46 | 2 | mysqli::mysqli(): (HY000/1049): Unknown database 'yangshi' | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>12-01 22:13:46 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>12-01 22:13:46 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>12-01 22:13:46 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>12-01 22:13:46 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>12-01 22:13:46 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>12-03 11:10:39 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:10:39 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:10:50 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-03 11:18:34 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:18:34 | 2 | fsockopen(): unable to connect to juhe.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:44:12 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:44:12 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:44:19 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:44:19 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 11:45:24 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-03 12:01:56 | 2 | extract() expects parameter 1 to be array, string given | phpcms\modules\formguide\formguide.php | 243
+<?php exit;?>12-03 17:33:21 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 17:33:21 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 17:33:31 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 17:33:31 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 20:37:15 | 2 | explode() expects parameter 3 to be long, string given | caches\caches_template\default\content\list_zhaopin.php | 16
+<?php exit;?>12-03 20:37:16 | 2 | explode() expects parameter 3 to be long, string given | caches\caches_template\default\content\list_zhaopin.php | 16
+<?php exit;?>12-03 21:46:36 | 2 | require(E:\PHPTools\www\yangshi\phpcms\modules\content\fields\\config.inc.php): failed to open stream: No such file or directory | phpcms\modules\content\sitemodel_field.php | 207
+<?php exit;?>12-03 21:51:41 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 21:51:41 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 21:51:41 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-03 21:51:41 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-05 18:06:52 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-05 18:06:52 | 2 | fsockopen(): unable to connect to juhe.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-05 18:12:12 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-05 18:12:12 | 2 | fsockopen(): unable to connect to juhe.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 17:33:08 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 17:33:08 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 20:49:07 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 20:49:07 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 20:58:35 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 20:58:35 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:03:39 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:03:39 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:04:35 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:04:35 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:11:02 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:11:02 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:11:44 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:11:44 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:12:12 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:12:12 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:12:14 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:12:14 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:12:15 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-07 21:12:15 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-08 21:29:36 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-08 21:29:36 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-08 21:29:36 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-08 21:29:36 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-09 23:14:33 | 2 | Illegal string offset 'imageurl' | caches\caches_template\default\content\index.php | 109
+<?php exit;?>12-09 23:16:18 | 2 | json_decode() expects parameter 1 to be string, array given | caches\caches_template\default\content\index.php | 108
+<?php exit;?>12-10 17:33:06 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-10 17:33:06 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-10 17:33:06 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-10 17:33:06 | 2 | strpos(): Empty needle         | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>12-10 21:13:05 | 2 | fsockopen(): php_network_getaddresses: getaddrinfo failed: ��֪������������  | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-10 21:13:05 | 2 | fsockopen(): unable to connect to juhe.phpcms.cn:80 (php_network_getaddresses: getaddrinfo failed: ��֪������������ ) | phpcms\libs\classes\http.class.php | 84

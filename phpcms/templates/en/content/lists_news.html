@@ -1,0 +1,43 @@
+{template 'content', 'header'}
+	<div class="container newsLists">
+		<div class="left fl">
+			<div class="crumbs">
+				{catpos($catid)}
+			</div>
+			<div class="currentTitle">{$CATEGORYS[$catid][catname]}</div>
+			{pc:content  action="lists" catid="$catid" order="id DESC" num="10" page="$page"}
+			{loop $data $r}
+			<div class="newsBox">
+				<div class="title"><a href="{$r[url]}">{$r[title]}</a></div>
+				<div class="img"><a href="{$r[url]}"><img src="{$r[thumb]}" width="333" height="160" alt=""></a></div>
+				<div class="info">{$r[description]}</div>
+			</div>
+			{/loop}
+			{/pc}
+			<div>{$page}</div>
+		</div>
+		<div class="right fl">
+			<div class="title"><span>图说央视动画</span></div>
+			<div class="tushuo">
+				{pc:get sql="SELECT url, thumb FROM `v9_news` Order by id DESC " num="3"}
+				{loop $data $r}
+				<a href="{$r[url]}"><img src="{$r[thumb]}" width="333" height="160" alt=""></a>
+				{/loop}
+				{/pc}
+			</div>
+			<div class="title"><span>近期更新</span></div>
+			{pc:get sql="SELECT title, description FROM `v9_news` Order by id DESC " num="3"}
+
+			{loop $data $r}
+			<div class="jinqiBox">
+				<div class="tit"><a href="{$r[url]}">{$r[title]}</a></div>
+				<div class="info">{$r[description]}</div>
+			</div>
+			{/loop}
+			{/pc}
+ 		</div>
+	</div>
+	
+{template 'content', 'footer'}
+</body>
+</html>

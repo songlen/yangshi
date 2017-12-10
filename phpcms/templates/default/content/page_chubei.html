@@ -1,0 +1,56 @@
+{template 'content', 'header'}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container contact">
+		<div class="crumbs">
+			{catpos($catid)}
+		</div>
+		<div class="contactTitle">个人信息</div>
+		<div class="form">
+			<form method="post" action="?m=formguide&c=index&a=show&formid=15" name="myform" id="myform">
+
+				
+				<div class="text_box">
+					<label for="info[fullname]">姓名</label>
+					<input type="text" class="text_input" name="info[fullname]">
+				</div>
+			
+				<div class="text_box">
+					<label for="info[telephone]">手机</label>
+					<input type="text" class="text_input" name="info[telephone]">
+				</div>
+			
+				<div class="text_box">
+					<label for="info[sex]">性别</label>
+					<input type="text" class="text_input" name="info[sex]">
+				</div>
+			
+				<div class="text_box">
+					<label for="info[year]">工作经验</label>
+					<input type="text" class="text_input" name="info[year]">
+				</div>
+			
+				<div class="text_box">
+					<label for="info[city]">所在城市</label>
+					<input type="text" class="text_input" name="info[city]">
+				</div>
+
+				<div class="textarea_box">
+					<label for="info[fullname]">教育经历</label>
+					<textarea name="info[fullname]"></textarea>
+				</div>
+				<div class="textarea_box">
+					<label for="info[work_experience]">工作经历</label>
+					<textarea name="info[work_experience]"></textarea>
+				</div>
+				<div class="textarea_box">
+					<label for="info[self_evaluation]">自我评价</label>
+					<textarea name="info[self_evaluation]"></textarea>
+				</div>
+				<div class="fasong">发送简历附件：<span>yangshidonghua@163.com</span></div>
+				<button class="submit" name="dosubmit">提交</button>
+			</form>
+		</div>
+	</div>
+{template 'content', 'footer'}
+</body>
+</html>

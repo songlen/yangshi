@@ -1,0 +1,36 @@
+{template 'content','header'}
+	<div class="categorybanner">{$CATEGORYS[$catid][image]}</div>
+	<div class="container pageContainer">
+		<div class="pageLeft">
+			<div class="leftNavTitle">About Us</div>
+			<div class="aboutNav">
+				<ul>
+					{pc:content action="category" catid="31" num="25" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+					<li {if $r[catid] == $catid} class="hover"{/if}><a href="{$r[url]}">{$r[catname]}</a></li>
+					{/loop}
+					{/pc}
+				</ul>
+				
+			</div>
+		</div>
+		<div class="pageRight">
+			<div class="crumbs">
+				{catpos($catid)}
+			</div>
+			<div class="currentTitle">{$CATEGORYS[$catid][catname]}</div>
+			<div class="licheng">
+				{pc:content action="lists" catid="$catid" order="id DESC"}
+				{loop $data $r}
+				<div class="lichengList">
+					<div class="year">{$r[title]}</div>
+					<div class="desc">{$r[description]}</div>
+				</div>
+				{/loop}
+				{/pc}
+			</div>
+		</div>
+	</div>
+{template 'content','footer'}
+</body>
+</html>

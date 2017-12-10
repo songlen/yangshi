@@ -16,7 +16,9 @@
 		</div>
 		
 	</div>
-	<div class="index_news_title"></div>
+	<!-- <div class="index_news_title"></div> -->
+	<div class="index_title_zh">新闻动态</div>
+	<div class="index_title_en">NEWS DYNAMIC</div>
 	<div class="container index_news_box">
 		<div class="index_video fl"><?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"block\" data=\"op=block&tag_md5=55d58bcbe46afafd63345c6b9dc2a335&pos=index_video\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">添加碎片</a>";}$block_tag = pc_base::load_app_class('block_tag', 'block');echo $block_tag->pc_tag(array('pos'=>'index_video',));?><?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?></div>
 		<div class="index_news fr">
@@ -83,7 +85,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="index_donghua_title"></div>
+	<!-- <div class="index_donghua_title"></div> -->
+	<div class="index_title_zh">动态家族</div>
+	<div class="index_title_en">ANIMATION FAMILY</div>
 	<div class="donghuabg">
 		<div id="LoopDiv" style="margin-top: 80px;">
 			<input id="S_Num" type="hidden" value="8" />
@@ -100,21 +104,32 @@
 			</div>
 		</div>
 
-		<div class="index_yansheng_title"></div>
+		<!-- <div class="index_yansheng_title"></div> -->
+		<div class="index_title_zh">衍生相关</div>
+		<div class="index_title_en">DERIVATIVES</div>
 		<div class="container">
 			<div class="index_yansheng_box">
 				<ul>
 					<li class="yanshi_1"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_26.jpg" alt=""></a></li>
 					<li class="yanshi_2"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_27.jpg" alt=""></a></li>
 					<li class="yanshi_3"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_28.jpg" alt=""></a></li>
-					<li class="yanshi_4"></li>
-					<li class="yanshi_5"></li>
-					<li class="yanshi_6"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_33.jpg" alt=""></a></li>
-					<li class="yanshi_7"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_34.jpg" alt=""></a></li>
-					<li class="yanshi_8"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_30.jpg" alt=""></a></li>
+					<li class="yanshi_4"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_33.jpg" alt=""></a></li>
+					<li class="yanshi_5"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_34.jpg" alt=""></a></li>
+					<li class="yanshi_6"><a href=""><img src="<?php echo APP_PATH;?>statics/default/images/index_30.jpg" alt=""></a></li>
+					<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=93efc5d084fc1643932159c166b5786a&sql=SELECT+setting+FROM+phpcms_poster+WHERE+spaceid+%3D+1+AND+disabled%3D0+ORDER+BY+listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM phpcms_poster WHERE spaceid = 1 AND disabled=0 ORDER BY listorder ASC LIMIT 20");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
+					<?php $n=1; if(is_array($data)) foreach($data AS $n => $r) { ?>
+					<?php 
+						$r = json_decode($r['setting'], true);
+						$r = $r[1];
+					?>
+					<li class="yanshi_{$n+1}"><a href="<?php echo $r['linkurl'];?>"><img src="<?php echo $r['imageurl'];?>" alt="<?php echo $r['alt'];?>"></a></li>
+					<?php $n++;}unset($n); ?>
+					<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>	
+					<li class="yanshi_7"></li>
+					<li class="yanshi_8"></li>
 				</ul>
 			</div>
-			<div class="index_yansheng_more"><a href="">MORE</a></div>
+			<!-- <div class="index_yansheng_more"><a href="">MORE</a></div> -->
 		</div>
 		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=de686d646fac88c5f405f6310649b5bd&sql=SELECT+setting+FROM+phpcms_poster+WHERE+spaceid+%3D+13+AND+disabled%3D0+ORDER+BY+listorder+ASC&num=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("SELECT setting FROM phpcms_poster WHERE spaceid = 13 AND disabled=0 ORDER BY listorder ASC LIMIT 1");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
 			<?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
@@ -130,14 +145,6 @@
 
 	
 	<script type="text/javascript">
-		// 导航下拉
-		$(function(){
-			$('.menu li').hover(function(){
-				$(this).find('dl').show();
-			}, function(){
-				$(this).find('dl').hide();
-			})
-		})
 
 
 		// 首页新闻切换

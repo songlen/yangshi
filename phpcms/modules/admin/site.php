@@ -24,6 +24,8 @@ class site extends admin {
 		header("Cache-control: private"); 
 		if (isset($_GET['show_header'])) $show_header = 1;
 		if (isset($_POST['dosubmit'])) {
+			$copyright = isset($_POST['copyright']) && trim($_POST['copyright']) ? trim($_POST['copyright']) : '';
+			$beian = isset($_POST['beian']) && trim($_POST['beian']) ? trim($_POST['beian']) : '';
 			$name = isset($_POST['name']) && trim($_POST['name']) ? trim($_POST['name']) : showmessage(L('site_name').L('empty'));
 			$dirname = isset($_POST['dirname']) && trim($_POST['dirname']) ? strtolower(trim($_POST['dirname'])) : showmessage(L('site_dirname').L('empty'));
 			$domain = isset($_POST['domain']) && trim($_POST['domain']) ? trim($_POST['domain']) : '';
@@ -68,7 +70,7 @@ class site extends admin {
 			}
 			$_POST['setting']['watermark_img'] = IMG_PATH.'water/'.$_POST['setting']['watermark_img'];
 			$setting = trim(array2string($_POST['setting']));
-			if ($this->db->insert(array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template,'setting'=>$setting, 'default_style'=>$default_style))) {
+			if ($this->db->insert(array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'copyright' =>$copyright, 'beian'=>$beian, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template,'setting'=>$setting, 'default_style'=>$default_style))) {
 				$class_site = pc_base::load_app_class('sites');
 				$class_site->set_cache();
 				showmessage(L('operation_success'), '?m=admin&c=site&a=init', '', 'add');
@@ -104,6 +106,8 @@ class site extends admin {
 		$siteid = isset($_GET['siteid']) && intval($_GET['siteid']) ? intval($_GET['siteid']) : showmessage(L('illegal_parameters'), HTTP_REFERER);
 		if ($data = $this->db->get_one(array('siteid'=>$siteid))) {
 			if (isset($_POST['dosubmit'])) {
+				$copyright = isset($_POST['copyright']) && trim($_POST['copyright']) ? trim($_POST['copyright']) : '';
+				$beian = isset($_POST['beian']) && trim($_POST['beian']) ? trim($_POST['beian']) : '';
 				$name = isset($_POST['name']) && trim($_POST['name']) ? trim($_POST['name']) : showmessage(L('site_name').L('empty'));
 				$dirname = isset($_POST['dirname']) && trim($_POST['dirname']) ? strtolower(trim($_POST['dirname'])) : ($siteid == 1 ? '' :showmessage(L('site_dirname').L('empty')));
 				$domain = isset($_POST['domain']) && trim($_POST['domain']) ? trim($_POST['domain']) : '';
@@ -151,7 +155,7 @@ class site extends admin {
 				}
 				$_POST['setting']['watermark_img'] = 'statics/images/water/'.$_POST['setting']['watermark_img'];
 				$setting = trim(array2string($_POST['setting']));
-				$sql = array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template, 'setting'=>$setting, 'default_style'=>$default_style);
+				$sql = array('name'=>$name,'dirname'=>$dirname, 'domain'=>$domain, 'copyright'=>$copyright, 'beian' => $beian, 'site_title'=>$site_title, 'keywords'=>$keywords, 'description'=>$description, 'release_point'=>$release_point, 'template'=>$template, 'setting'=>$setting, 'default_style'=>$default_style);
 				if ($siteid == 1) unset($sql['dirname']);
 				if ($this->db->update($sql, array('siteid'=>$siteid))) {
 					$class_site = pc_base::load_app_class('sites');

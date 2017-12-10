@@ -1,0 +1,49 @@
+{template "content", "header"}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container pageContainer">
+		<div class="pageLeft">
+			<div class="leftNavTitle">About Us</div>
+			<div class="aboutNav">
+				<ul>
+					{pc:content action="category" catid="31" num="25" siteid="$siteid" order="listorder ASC"}
+					{loop $data $r}
+					<li {if $r[catid] == $catid} class="hover"{/if}><a href="{$r[url]}">{$r[catname]}</a></li>
+					{/loop}
+					{/pc}
+				</ul>
+				
+			</div>
+		</div>
+		<div class="pageRight">
+
+			<div class="crumbs">
+				{catpos($catid)}
+			</div>
+			<div class="currentTitle">{$CATEGORYS[$catid][catname]}</div>
+			<div class="pageContent">
+				<ul class="fengcai">
+					{pc:content action="lists" catid="$catid" num="4"}
+					
+					{loop $data $r}
+					<li><img src="{thumb($r[thumb])}" alt="" width="400" height="310"><p><span>{$r[title]}</span></p></li>
+					{/loop}
+					{/pc}
+				</ul>
+			</div>
+		</div>
+	</div>
+{template "content", "footer"}
+<script type="text/javascript">
+	if(GetQueryString('catid')=='1'){
+		var url = window.location.href.replace('catid=1', 'catid=2');
+		window.location.href=url
+	}
+	function GetQueryString(name)
+	{
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+{template 'content', 'header'}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container news_container">
+		<div class="title_zh">CCTV & CITVC News</div>
+		<div class="title_en">CCTV & CITVC News</div>
+	</div>
+	<div class="news_bg">
+		<div class="container news_container">
+			<div class="news_one">
+				<ul>
+					{pc:content  action="lists" catid="41" order="id DESC" num="3"}
+					{loop $data $r}
+					<li>
+						<div class="date fl">
+							<p class="day">{date('d', $r[inputtime])}</p>
+							<p class="year">{date('Y.m', $r[inputtime])}</p>
+						</div>
+						<div class="news_info fl">
+							<p class="title"><a href="">{$r[title]}</a></p>
+							<p class="brief">{$r[description]}</p>
+						</div>
+					</li>
+					{/loop}
+					{/pc}
+				</ul>
+				<div class="more"><a href="{$CATEGORYS[41][url]}">MORE</a></div>
+			</div>
+		
+		</div>	
+	</div>
+	<div class="container news_container">
+		<div class="title_zh">Company News</div>
+		<div class="title_en">Company News</div>
+		<div class="company_news">
+			<ul>
+				{pc:content  action="lists" catid="42" order="id DESC" num="3"}
+				<?php $data = array_values($data);?>
+				{if isset($data[0])}
+				<li class="first">
+					<img src="{$data[0][thumb]}" width="300" height="240" alt="">
+					<div class="title"><a href="{$data[0][url]}">{$data[0][title]}</a></div>
+					<div class="info">{$data[0][description]}</div>
+				</li>
+				{/if}
+				<li class="second">
+					<img src="{$data[1][thumb]}" width="300" height="240" alt="">
+					<div class="title"><a href="{$data[1][url]}">{$data[1][title]}</a></div>
+					<div class="info">{$data[1][description]}</div>
+				</li>
+				<li class="third">
+					<img src="{$data[2][thumb]}" width="598" height="300" alt="">
+					<div class="title"><a href="{$data[2][url]}">{$data[3][title]}</a></div>
+					<div class="info">{$data[2][description]}</div>
+				</li>
+				{/pc}
+			</ul>
+		</div>
+		<div class="more"><a href="{$CATEGORYS[42][url]}">MORE</a></div>
+		<div class="title_zh">Company Dynamics</div>
+		<div class="title_en">Company Dynamics</div>
+		<div class="company_dongt">
+			<ul>
+				{pc:content  action="lists" catid="57" order="id DESC" num="3"}
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}"><img src="{$r[thumb]}" width="380" height="247" alt=""></a>
+					<div class="title">{$r[title]}</div>
+					<div class="info">{$r[description]}</div>
+				</li>
+				{/loop}
+				{/pc}
+			</ul>
+		</div>
+		<div class="more"><a href="{$CATEGORYS[57][url]}">MORE</a></div>
+		<div class="title_zh">Communities</div>
+		<div class="title_en">Communities</div>
+		<div class="dangqun">
+			<ul>
+				{pc:content  action="lists" catid="43" order="id DESC" num="3"}
+				{loop $data $r}
+				<li><a href="{$r[url]}"><img src="{$r[thumb]}" width="380" height="247" alt=""></a></li>
+				{/loop}
+				{/pc}
+			</ul>
+		</div>
+
+		<div class="more"><a href="{$CATEGORYS[43][url]}">MORE</a></div>
+		<div class="title_zh">Cooperation</div>
+		<div class="title_en">Cooperation</div>
+		<div class="company_dongt">
+			<ul>
+				{pc:content  action="lists" catid="44" order="id DESC" num="3"}
+				{loop $data $r}
+				<li>
+					<a href="{$r[url]}"><img src="{$r[thumb]}" width="380" height="247" alt=""></a>
+					<div class="title">{$r[title]}</div>
+					<div class="info">{$r[description]}</div>
+				</li>
+				{/loop}
+				{/pc}
+			</ul>
+		</div>
+		<div class="more"><a href="{$CATEGORYS[44][url]}">MORE</a></div>
+		<div class="threeNews">
+			<ul>
+				<li>
+					<div class="tit">Animation News</div>
+					{pc:content  action="lists" catid="45" order="id DESC" num="1"}
+					{loop $data $r}
+					<div class="libg">
+						<a href="{$r[url]}"><img src="{$r[thumb]}" width="380" height="247" alt=""></a>
+						<div class="title">{$r[title]}</div>
+						<div class="info">{$r[description]}</div>
+						
+					</div>
+					{/loop}
+					{/pc}
+
+					<div class="more"><a href="{$CATEGORYS[45][url]}">MORE</a></div> 
+				</li>
+				<li>
+					<div class="tit">Industry Dynamics</div>
+					{pc:content  action="lists" catid="46" order="id DESC" num="1"}
+					{loop $data $r}
+					<div class="libg">
+						<a href="{$r[url]}"><img src="{$r[thumb]}" width="380" height="247" alt=""></a>
+						<div class="title">{$r[title]}</div>
+						<div class="info">{$r[description]}</div>
+						
+					</div>
+					{/loop}
+					{/pc}
+
+					<div class="more"><a href="{$CATEGORYS[46][url]}">MORE</a></div>
+				</li>
+				<li>
+					<div class="tit">Others</div>
+					{pc:content  action="lists" catid="47" order="id DESC" num="1"}
+					{loop $data $r}
+					<div class="libg">
+						<a href="{$r[url]}"><img src="{$r[thumb]}" width="380" height="247" alt=""></a>
+						<div class="title">{$r[title]}</div>
+						<div class="info">{$r[description]}</div>
+						
+					</div>
+					{/loop}
+					{/pc}
+					<div class="more"><a href="{$CATEGORYS[47][url]}">MORE</a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+{template 'content', 'footer'}
+</body>
+</html>

@@ -1,0 +1,30 @@
+{template 'content', 'header'}
+	<div class="container newsLists">
+		<div class="left fl">
+			{$content}
+		</div>
+		<div class="right fl">
+			<div class="title"><span>图说央视动画</span></div>
+			<div class="tushuo">
+				{pc:get sql="SELECT url, thumb FROM `v9_news` Order by id DESC " num="3"}
+				{loop $data $r}
+				<a href="{$r[url]}"><img src="{$r[thumb]}" width="333" height="160" alt=""></a>
+				{/loop}
+				{/pc}
+			</div>
+			<div class="title"><span>近期更新</span></div>
+			{pc:get sql="SELECT title, description FROM `v9_news` Order by id DESC " num="3"}
+
+			{loop $data $r}
+			<div class="jinqiBox">
+				<div class="tit"><a href="{$r[url]}">{$r[title]}</a></div>
+				<div class="info">{$r[description]}</div>
+			</div>
+			{/loop}
+			{/pc}
+ 		</div>
+	</div>
+	
+{template 'content', 'footer'}
+</body>
+</html>

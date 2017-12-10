@@ -1,0 +1,30 @@
+
+{template 'content', 'header'}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container contact">
+		<div class="crumbs">
+			{catpos($catid)}
+		</div>
+		<div class="contactTitle">人才招聘</div>
+		{pc:content action="lists" catid="$catid" order="id DESC"}
+
+		{loop $data $r}
+		<div class="zhaopinlist">
+			<div class="title"><a href="{$r[url]}">{$r[title]}</a></div>
+
+			<ul>
+				<?php 
+				$show_fields = explode(',', trim($r['show_fields'], ','));
+				$customer_fields = pc_base::load_config('job_fields');
+				?>
+				{loop $show_fields $field}
+				<li><span class="field">{$customer_fields[$field]}</span><span>{$r[$field]}</span></li>
+				{/loop}
+			</ul>
+		</div>
+		{/loop}
+		{/pc}
+	</div>
+{template 'content', 'footer'}
+</body>
+</html>

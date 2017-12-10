@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="web_brief">
-			<p><span class="banquan">版权所有</span>：央视动漫集团有限公司 <span class="beian">备案号：京</span></p>
+			<p><span class="banquan">版权所有</span>：<?php echo $SEO['copyright'];?> <span class="beian">备案号：<?php echo $SEO['beian'];?></span></p>
 		</div>
 	</div>
 <script type="text/javascript">

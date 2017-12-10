@@ -1,0 +1,15 @@
+{template "content", "header"}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}"></div>
+	<div class="container contact">
+		<div class="crumbs">
+			<a href="{$CATEGORYS[$catid][url]}">联系我们</a> > 内容
+		</div>
+		<div class="contactTitle">联系方式</div>
+		<div class="pageContent">
+			{$content}
+		</div>
+	</div>
+{template "content", "footer"}
+
+</body>
+</html>

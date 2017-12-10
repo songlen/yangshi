@@ -1,0 +1,45 @@
+{template 'content', 'header'}
+	<div class="categorybanner"><img src="{$CATEGORYS[$catid][image]}">
+		<div class="container" style="position: relative;">
+			<div class="banner_wenzibg"></div>
+			<div class="banner_wenzibox">
+				<div class="renli_banner_title">人才招聘</div>
+				<div class="renli_banner_des">公司成立于2007年，网信事业，代表新的生产力、新的发展方向。发展网信事业，全球竞相发力；建设网络强国，我们扬帆远航。</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="container contact">
+		<div class="crumbs">
+			<!-- <a href="">人力资源</a> > <a href="">人才储备</a> > 内容 -->
+		</div>
+		<div class="contactTitle">人才招聘</div>
+		<div class="renlibox">
+			<div class="renli_item item1">
+				<div class="title">人才理念</div>
+				<div class="con">{$CATEGORYS[17][description]}</div>
+				<div class="href"><a href="{$CATEGORYS[17][url]}">MORE</a></div>
+			</div>
+			<div class="renli_margin"></div>
+			<div class="renli_item item2">
+				<div class="title">人才储备</div>
+				<div class="con"></div>
+
+				<div class="href"><a href="{$CAT[url]}">我要应聘>></a></div>
+			</div>
+			<div class="renli_margin"></div>
+			<div class="renli_item item3">
+				<div class="title">人才招聘</div>
+				<div class="gang">岗位信息 > </div>
+				<div class="zhaolist">
+					<ul>
+						<li><a href="">法务主管招聘信息</a></li>
+					</ul>
+				</div>
+				<div class="href"><a href="{$CATEGORYS[16][url]}">MORE</a></div>
+			</div>
+		</div>
+	</div>
+{template 'content', 'footer'}
+</body>
+</html>

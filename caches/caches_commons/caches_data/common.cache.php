@@ -1,13 +1,14 @@
 <?php
 return array (
+  'copyright' => '本年55',
+  'beian' => '数据库',
   'admin_email' => 'phpcms@phpcms.cn',
-  'adminaccessip' => '0',
   'maxloginfailedtimes' => '8',
-  'maxiplockedtime' => '15',
   'minrefreshtime' => '2',
   'mail_type' => '1',
   'mail_server' => 'smtp.qq.com',
   'mail_port' => '25',
+  'category_ajax' => '0',
   'mail_user' => 'phpcms.cn@foxmail.com',
   'mail_auth' => '1',
   'mail_from' => 'phpcms.cn@foxmail.com',

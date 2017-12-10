@@ -23,18 +23,18 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .index_search {margin: 0px; width: 156px; height: 28px;}
 .index_search input{ background: url(../images/index_03.jpg) no-repeat ; float: left; height: 28px; padding-right: 20px; padding-left:30px; width: 111px; color: #FFF; margin-top: 7px}
  .index_search input {outline: none;}
-.nav {border-bottom: 1px solid #d2d2d2;}
+.nav {border-bottom: 1px solid #d2d2d2; overflow: hidden;}
 .logo {padding:10px 0;}
 .menu ul li {float: left; height: 112px; line-height: 112px; font-size: 20px; text-align: center;}
 .menu ul li a{display: inline-block; height: 112px; font-family: "黑体"; width: 130px; color: #000;}
 .menu ul li:hover{background: url(../images/index_06.jpg) no-repeat center bottom #fafafb;}
-.menu ul li:hover a{color: #af0300; font-size: 24px;}
-.menu ul li:hover dl dt a {color: #ffffff; font-size: 20px;}
+.menu ul li:hover a{color: #af0300;}
+.menu ul li:hover dl dt a {color: #ffffff;}
 .menu ul li.first a {width: 180px;}
 
-.menu dl {position: absolute; background: #ad0400; display: none; top: 152px; z-index: 100;}
-.menu dt {line-height: 30px; height: 30px;}
-.menu ul li dt a{height: 30px; line-height: 30px; color: #FFF;}
+.menu dl {position: absolute; background: #ad0400; display: none; top: 146px; z-index: 100; padding: 5px 2px;}
+.menu dt {line-height: 40px; height: 40px;border-bottom: 1px solid #fff;}
+.menu ul li dt a{height: 40px; line-height: 40px; font-size: 18px; color: #FFF; padding: 0 10px;}
 .menu ul dt:hover{background: #cc6a67}
 
 /*首页轮播图*/
@@ -57,7 +57,7 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .index_news_title{height: 110px; margin-top: 150px; background: url(../images/index_11.jpg) no-repeat center bottom;}
 .index_donghua_title{height: 110px; margin-top: 150px; background: url(../images/index_19.jpg) no-repeat center bottom;}
 .index_yansheng_title{height: 110px; margin-top: 150px; background: url(../images/index_22.jpg) no-repeat center bottom;}
-.index_news_box {margin-top: 70px;}
+.index_news_box {margin-top: 70px; overflow: hidden;}
 
 
 .index_video{width: 580px;}
@@ -114,7 +114,7 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 
 
 /*内容页*/
-.categorybanner { position: relative;}
+
 .categorybanner img {width: 100%;}
 .pageContainer {overflow: hidden; border: 1px solid #eee; padding-right: 5px; padding-bottom: 30px; padding-top: 30px; margin-top: 98px;}
 .pageLeft {width: 225px; float: left; background: #ad0400; padding-bottom: 12px;}
@@ -129,8 +129,8 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 
 .crumbs {color: #b5b5b5; font-size: 18px;}
 .crumbs a{color: #b5b5b5; }
-.currentTitle {font-family: "黑体"; font-size: 24px; padding-top: 18px; border-bottom: 1px solid #d2d2d2; padding-bottom:25px; }
-.pageContent {padding:20px 0 50px 0; line-height: 24px;}
+.currentTitle {font-family: "黑体"; font-size: 24px; padding-top: 18px; border-bottom: 2px solid #efefef; padding-bottom:25px; }
+.pageContent {padding:20px 0 50px 0; line-height: 28px;}
 
 .licheng {padding: 20px 0 50px 0;}
 .lichengList {overflow: hidden; padding: 10px 0; background: url(../images/lichengshu.jpg) 86px top repeat-y;}
@@ -220,3 +220,69 @@ a:hover,a:active,a:focus{color:#ad0400;text-decoration: none;}
 .dong_yansheng_box .yanshi_6{position: absolute; top: 275px; left: 149px;}
 .dong_yansheng_box .yanshi_7{position: absolute; top: 376px; left: 420px;}
 .dong_yansheng_box .yanshi_8{position: absolute; top: 266px; left: 687px;}
+
+.title_zh {font-size: 45px; color: #ad0600; text-align: center; font-weight: bold; margin-top: 50px;}
+.title_en { font-size: 18px; color: #ad0600; text-align: center; margin-top: 30px; background: url(../images/dongx_05.jpg) no-repeat center -2px; }
+
+.news_one ul { overflow: hidden; }
+.news_one li {width: 380px; float: left; margin-left: 20px; overflow: hidden;}
+.news_one .date{width: 70px;}
+.news_one .date p {height: 40px; line-height: 40px; text-align: center; font-family: "微软雅黑"}
+.news_one .date .day{background: #ad0400; color: #FFF; font-size: 28px;}
+.news_one .date .year {background: #e3e3e1; color: #b43b33; font-size: 16px;}
+
+.news_one .news_info {float: left; margin-left: 20px; width: 290px}
+.news_one .news_info .title{font-size: 18px; font-weight: bold; }
+.news_one .news_info .brief {color: #999; line-height: 20px; margin-top: 45px;}
+.news_container .more {text-align: center; margin-top: 60px;}
+.news_container .more a{padding: 3px 5px; color: #999; display: inline-block; border: 1px solid #bfbfbf; font-weight: bold; font-family: "微软雅黑";}
+.news_container .more a:hover{color: #ad0400; border-color: #ad0400;}
+.news_bg {background: #f9f9f9; padding: 30px 0; margin-top: 90px;}
+
+.company_news { overflow: hidden; margin-top: 80px;border: 1px solid #f5f5f5; }
+.company_news .first, .company_news .second{width: 300px; position: relative;}
+.company_news li {height: 480px; position: relative; float: left;}
+.company_news li .title {font-weight: bold; line-height: 32px; font-size: 24px; padding: 10px 10px; }
+.company_news li .info {color: #999; line-height: 24px; font-size: 20px; line-height: 24px; padding: 0 10px; text-align: justify;}
+.company_news .second img {position: absolute; bottom: 0;}
+.company_news li.second .title {padding: 0 10px 10px;}
+.company_news li.first, .company_news li.second {width: 300px;}
+.company_news li.third {width: 598px;}
+
+.company_dongt {margin-top: 80px;}
+.company_dongt ul {overflow: hidden; margin-left: -30px;}
+.company_dongt li {float:left; width: 380px; margin-left: 30px; background: #f1f1f1; height: 490px;}
+.company_dongt li .title {line-height: 32px; font-size: 24px; padding: 10px 10px; }
+.company_dongt li .info {color: #999; line-height: 24px; font-size: 20px; line-height: 24px; padding: 0 10px; text-align: justify;}
+
+.dangqun {margin-top: 80px;}
+.dangqun ul {overflow: hidden; margin-left: -30px;}
+.dangqun li {float:left; width: 380px; margin-left: 30px;}
+
+.threeNews {margin-top: 80px;}
+.threeNews ul {overflow: hidden; margin-left: -30px;}
+.threeNews li {float: left; width: 380px; margin-left: 30px;}
+.threeNews .tit {background: url(../images/zixun_03.jpg) no-repeat left top; padding-left: 60px; font-size: 36px; color: #ad0600; font-weight: bold; padding-bottom: 20px; border-bottom: 2px solid #ad0400;  height: 46px; line-height: 46px;}
+.threeNews li .libg .title {line-height: 32px; font-size: 24px; padding: 10px 10px; }
+.threeNews li .libg {margin-top: 70px;}
+.threeNews li .libg .info {color: #999; line-height: 24px; font-size: 20px; line-height: 24px; padding: 0 10px; text-align: justify;}
+.threeNews li .libg {background: #f1f1f1; padding-bottom: 20px; height: 490px;}
+
+.newsLists {overflow: hidden;}
+.newsLists .left {width: 780px; margin-top: 30px;}
+.newsLists .right {width: 333px; margin-left: 87px; margin-top: 10px; }
+.newsLists .currentTitle {color: #ad0400;}
+
+.newsBox {margin-top: 20px; padding-bottom: 20px; border-bottom: 2px solid #efefef; overflow: hidden;}
+.newsBox .title {font-size: 22px; font-weight: bold; color: #000; padding-bottom: 15px; }
+.newsBox .img {float: left; width: 333px;}
+.newsBox .info {float: left; width: 430px; margin-left: 16px; color: #989898; line-height: 22px;}
+
+.newsLists .right .title {padding-left: 55px; height: 45px; margin-top: 20px; display: table; margin-bottom: 10px; background: url(../images/zixun_03.jpg) no-repeat left bottom;}
+.newsLists .right .title span {display: table-cell; vertical-align: bottom; font-size: 24px; font-weight: bold;}
+.newsLists .tushuo {overflow: hidden;}
+.newsLists .tushuo img {float: left; margin-top: 10px;}
+
+.jinqiBox {margin-top: 20px; border-bottom: 1px solid #efefef; padding-bottom: 15px;}
+.jinqiBox .tit {font-weight: bold; font-size: 20px;}
+.jinqiBox .info { color: #989898; margin-top: 10px; line-height: 22px; }
